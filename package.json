@@ -1,0 +1,26 @@
+{
+    "name": "restful-routes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node server.js",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "Phillip Cantu",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@jworkman-fs/asl": "^1.2.43",
+        "axios": "^1.13.2",
+        "cors": "^2.8.5",
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "jest": "^30.2.0",
+        "morgan": "^1.10.1",
+        "nodemon": "^3.1.11"
+    }
+}
