@@ -170,11 +170,7 @@ export const createContact = (req, res, next) => {
             email: "smarquise@gmail.com"
         })
         */
-        return res.status(201).json({
-            message: `${req.method} - Request made`,
-            success: true,
-            contact: newContact,
-        });
+        return res.status(201).json(newContact);
     } catch (err) {
         return next(err);
     }
@@ -189,11 +185,7 @@ export const getContactById = (req, res, next) => {
     try {
         const foundContact = ContactModel.show(id);
 
-        return res.status(200).json({
-            message: `${req.method} - Request made`,
-            success: true,
-            contact: foundContact,
-        });
+        return res.status(200).json(foundContact);
     } catch (err) {
         return next(err);
     }
@@ -218,11 +210,7 @@ export const updateContact = (req, res, next) => {
         // update contact example: ContactModel.update(11, { fname: 'Shae' })
         const updatedContact = ContactModel.update(id, data);
 
-        return res.status(200).json({
-            message: `${req.method} - Request made`,
-            success: true,
-            contact: updatedContact,
-        });
+        return res.status(200).json(updatedContact);
     } catch (err) {
         return next(err);
     }
