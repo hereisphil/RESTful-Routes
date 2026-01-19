@@ -166,7 +166,9 @@ export const createContact = (req, res, next) => {
             email: "smarquise@gmail.com"
         })
         */
-        return res.status(201).json(newContact);
+        // REQUIRED by tests:
+        return res.redirect(303, `/v1/contacts/${newContact.id}`);
+        // return res.status(201).json(newContact); OLD VERSION
     } catch (err) {
         return next(err);
     }
